@@ -1,5 +1,7 @@
 <script setup>
+import {RouterView} from "vue-router"
 import {ref} from "vue"
+
 
 const showModal = ref(false)
 const newNote = ref("")
@@ -36,7 +38,9 @@ const addNote = () =>{
 
 
 <template>
+  
   <main>
+    <!-- <RouterView/> -->
     <div v-if="showModal" class="overlay"> 
       <div class="modal">
         <textarea v-model.trim="newNote" name="note" id="note" cols="30" rows="10"></textarea>
